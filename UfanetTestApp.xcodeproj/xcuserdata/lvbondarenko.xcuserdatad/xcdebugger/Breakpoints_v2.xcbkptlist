@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "88B1F8B9-C0A8-403D-9B86-0C8627104040"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F193B19-A24B-4BB9-86FB-395CB5858B93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "setupViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2F193B19-A24B-4BB9-86FB-395CB5858B93 - 9d840c160c3c698a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UfanetTestApp.MainViewController.setupViewModel() -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "2F193B19-A24B-4BB9-86FB-395CB5858B93 - fdef4876e597fbb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;UfanetTestApp.CharacterModel&gt;) -&gt; () in UfanetTestApp.MainViewController.setupViewModel() -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "2F193B19-A24B-4BB9-86FB-395CB5858B93 - fdef4876e597fbb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;UfanetTestApp.CharacterModel&gt;) -&gt; () in UfanetTestApp.MainViewController.setupViewModel() -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "2F193B19-A24B-4BB9-86FB-395CB5858B93 - 73e88285149a27d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Array&lt;UfanetTestApp.CharacterModel&gt;) -&gt; () in UfanetTestApp.MainViewController.setupViewModel() -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "2F193B19-A24B-4BB9-86FB-395CB5858B93 - fdef4876e597fbd6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;UfanetTestApp.CharacterModel&gt;) -&gt; () in UfanetTestApp.MainViewController.setupViewModel() -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "2F193B19-A24B-4BB9-86FB-395CB5858B93 - 73e88285149a3a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Array&lt;UfanetTestApp.CharacterModel&gt;) -&gt; () in UfanetTestApp.MainViewController.setupViewModel() -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4BA9BD45-DABA-47EA-88E9-CD4EBB08FDF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/MainPageModule/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A726CDA1-4B2B-4531-AD34-6089E6028F89"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/MainPageModule/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDD3C6E2-4D95-4C6B-BB0C-20774813586E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B461DF85-A9D6-4D91-B49D-612D51E7FCF0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/MainPageModule/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B461DF85-A9D6-4D91-B49D-612D51E7FCF0 - c1bd9ec4b4362552"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UfanetTestApp.MainViewModelImp.getData() -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "B461DF85-A9D6-4D91-B49D-612D51E7FCF0 - 81adcc7468aaed42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;UfanetTestApp.AllCharactersModel, Swift.Error&gt;) -&gt; () in UfanetTestApp.MainViewModelImp.getData() -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "424">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28B1ADED-9BA8-4064-9DE8-A486D24A9E79"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F5DA04D-5765-40D5-8FB7-EBE01507B9C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1F5DA04D-5765-40D5-8FB7-EBE01507B9C7 - 8552579ac499827"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UfanetTestApp.MainViewController.tableView(_: __C.UITableView, shouldHighlightRowAt: Foundation.IndexPath) -&gt; Swift.Bool"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "1F5DA04D-5765-40D5-8FB7-EBE01507B9C7 - 7fca831a816b60ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UfanetTestApp.MainViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28B23045-F19E-4F16-9BD7-D33578D72717"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/DetailCharacterModule/DetailCharacterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "configureView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "28B23045-F19E-4F16-9BD7-D33578D72717 - 6b395ac17aa40a51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UfanetTestApp.DetailCharacterViewController.configureView() -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/DetailCharacterModule/DetailCharacterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "28B23045-F19E-4F16-9BD7-D33578D72717 - 6b395ac17aa40a51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UfanetTestApp.DetailCharacterViewController.configureView() -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/DetailCharacterModule/DetailCharacterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "752">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CFAE5AE-AC44-465F-9068-01C883EDC8FB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/MainPageModule/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "setFav(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFCB7377-F251-4F31-9FA1-77A53158CE9A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Services/FavoriteDatabase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "save(items:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DFF0FEC3-617D-4EE2-951C-3A3779D8AA36"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/DetailCharacterModule/DetailCharacterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "onFavItem()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "699101CA-DB04-4A40-A0AF-D839362ACD8B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "699101CA-DB04-4A40-A0AF-D839362ACD8B - 5b5ae8f3fe78fb5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in UfanetTestApp.MainViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "592">
+               </Location>
+               <Location
+                  uuid = "699101CA-DB04-4A40-A0AF-D839362ACD8B - 5b5ae8f3fe78fb5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in UfanetTestApp.MainViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "UfanetTestApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvbondarenko/Downloads/UfanetTestApp/UfanetTestApp/Modules/MainPageModule/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "644">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
