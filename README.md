@@ -1,6 +1,6 @@
 # RickAndMortyApp
 
-MVVM, SnapKit, Kingfisher, REST API
+MVVM, SnapKit, Kingfisher, UserDefaults, REST API
 
 Реализовал:
 1) Парсинг https://rickandmortyapi.com/
