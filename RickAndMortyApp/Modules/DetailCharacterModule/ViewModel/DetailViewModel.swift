@@ -10,6 +10,7 @@ import Foundation
 class DetailViewModel {
     
     var character: CharacterModel
+    var favDatabase = FavoriteDatabase()
     
     var id: Int
     var imageCharacter: String
@@ -29,8 +30,6 @@ class DetailViewModel {
         self.speciesCharacter = character.species
     }
     
-    var favDatabase = FavoriteDatabase()
-    
     func setFav() {
         var items = favDatabase.get()
         if items.contains(id) {
@@ -40,5 +39,4 @@ class DetailViewModel {
         }
         favDatabase.save(items: items)
     }
-
 }

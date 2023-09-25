@@ -22,6 +22,7 @@ class MainTableViewCell: UITableViewCell {
     }
     
     // MARK: - UI
+    
     private var avatarImageView: UIImageView = {
         var image = UIImageView()
         image.layer.cornerRadius = 10
@@ -43,16 +44,15 @@ class MainTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var favouriteButton: UIButton = {
+    private var favouriteButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBlue
-        button.setTitle("Добавить в избранное", for: .normal)
+        button.setTitle("Add to favorites", for: .normal)
         button.layer.cornerRadius = 15
         button.setTitleColor(.lightGray, for: .highlighted)
         button.addTarget(nil,
                          action: #selector(buttonTap),
                          for: .touchUpInside)
-        button.titleLabel?.font = UIFont(name: constant.avenirBook, size: 13)
         return button
     }()
     
@@ -69,7 +69,8 @@ class MainTableViewCell: UITableViewCell {
         layout()
     }
     
-    // MARK: View hierarchy
+    // MARK: - View hierarchy
+    
     private func addViews() {
         contentView.backgroundColor = .lightGray
         contentView.layer.cornerRadius = 15
@@ -78,6 +79,8 @@ class MainTableViewCell: UITableViewCell {
         contentView.addSubview(nameLabel)
         contentView.addSubview(statusLabel)
         contentView.addSubview(favouriteButton)
+        
+        configureAddFavouriteButton()
     }
     
     // MARK: - Layout
@@ -123,6 +126,8 @@ class MainTableViewCell: UITableViewCell {
         configureStatusCharacterLabel(status: character.status)
     }
     
+    // MARK: - Private methods
+    
     private func configureImageView(imageUrl: String) {
         avatarImageView.contentMode = .scaleAspectFit
         avatarImageView.clipsToBounds = true
@@ -139,14 +144,29 @@ class MainTableViewCell: UITableViewCell {
         statusLabel.font = UIFont(name: constant.avenirBook, size: 15)
     }
     
+    private func configureAddFavouriteButton() {
+        favouriteButton.titleLabel?.font = UIFont(name: constant.avenirBook, size: 15)
+    }
+    
     private func updateTitleButton() {
         if isFavourite {
-            favouriteButton.setTitle("Убрать из избранного", for: .normal)
+            favouriteButton.setTitle("Remove from favorites", for: .normal)
             favouriteButton.backgroundColor = .red
         } else {
-            favouriteButton.setTitle("Добавить в избранное", for: .normal)
+            favouriteButton.setTitle("Add to favorites", for: .normal)
             favouriteButton.backgroundColor = .systemBlue
         }
+    }
+    
+    //MARK: - PrepareForReuse method
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        avatarImageView.image = nil
+        nameLabel.text = ""
+        statusLabel.text = ""
+        isFavourite = false
+        charID = 0
     }
     
     @objc
@@ -154,10 +174,5 @@ class MainTableViewCell: UITableViewCell {
         isFavourite.toggle()
         updateTitleButton()
         onToggleFav?(charID)
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        avatarImageView.image = nil
     }
 }

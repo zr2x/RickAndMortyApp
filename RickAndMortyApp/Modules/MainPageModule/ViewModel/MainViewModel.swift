@@ -22,9 +22,7 @@ class MainViewModelImp: MainViewModel {
     
     var onLoadCharacters: (([CharacterModel]) -> ())?
     var onErrorHandler: ((Error) -> ())?
-    
     var dataSource: AllCharactersModel?
-    
     var favouriteDataBase = FavoriteDatabase()
     
     func getData() {
@@ -34,12 +32,10 @@ class MainViewModelImp: MainViewModel {
                 self?.onLoadCharacters?(data.results)
             case .failure(let error):
                 self?.onErrorHandler?(error)
-                // TODO: Error handler
             }
         }
     }
-
-
+    
     func getFavouriteList() -> Set<Int> {
         favouriteDataBase.get()
     }

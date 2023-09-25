@@ -22,12 +22,6 @@ class MainViewController: UIViewController {
         return tableView
     }()
     
-    private var containerView: UIView = {
-        let view = UIView()
-        
-        return view
-    }()
-    
     private var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         
@@ -50,13 +44,11 @@ class MainViewController: UIViewController {
         setupViewModel()
     }
     
-
     private func setupView() {
         self.title = "All characters"
         view.backgroundColor = .systemBackground
         view.addSubview(tableView)
-        view.addSubview(containerView)
-        containerView.addSubview(segmentedControl)
+        view.addSubview(segmentedControl)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -65,31 +57,22 @@ class MainViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         
         layout()
-        setupSegmentedControl()
         setupRefreshControl()
     }
     
     // MARK: - Layout
     private func layout() {
-        
-        containerView.snp.makeConstraints { make in
-            make.left.equalTo(view.safeAreaLayoutGuide).offset(50)
-            make.right.equalTo(view.safeAreaLayoutGuide).offset(-50)
-            make.height.equalTo(40)
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(15)
-        }
-        
         segmentedControl.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(15)
             make.left.equalTo(view.safeAreaLayoutGuide).offset(50)
             make.right.equalTo(view.safeAreaLayoutGuide).offset(-50)
             make.height.equalTo(35)
         }
         
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(segmentedControl.snp.top).inset(50)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.left.right.bottom.equalTo(view.safeAreaLayoutGuide)
         }
+        tableView.tableHeaderView = segmentedControl
     }
     
     private func setupViewModel() {
@@ -111,6 +94,8 @@ class MainViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(refreshControlAction), for: .valueChanged)
     }
     
+    // MARK: - Refresh action
+    
     @objc
     private func refreshControlAction() {
         tableView.reloadData()
@@ -118,6 +103,8 @@ class MainViewController: UIViewController {
             self.tableView.refreshControl?.endRefreshing()
         }
     }
+    
+    // MARK: - Segment action
     
     @objc
     private func segmentControlAction() {
@@ -130,10 +117,6 @@ class MainViewController: UIViewController {
             break
         }
         tableView.reloadData()
-    }
-    
-    private func setupSegmentedControl() {
-        
     }
 }
 
@@ -154,7 +137,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             viewModel.setFavourite(id: id)
             guard self?.segmentedControl.selectedSegmentIndex == 1 else { return }
             self?.cellDataSource = dataSource.filter({ viewModel.getFavouriteList().contains($0.id) })
-            tableView.reloadData()  
+            tableView.reloadData()
         }
         return cell
     }
@@ -170,7 +153,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             guard let self = self, let cell = tableView.cellForRow(at: indexPath) as? MainTableViewCell else { return }
             cell.configureViews(character: character, isFav: self.viewModel.getFavouriteList().contains(character.id))
         }
-        
         navigationController?.pushViewController(detail, animated: true)
     }
 }

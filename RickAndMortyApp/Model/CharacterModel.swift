@@ -14,7 +14,6 @@ struct AllCharactersModel: Codable {
         let next: String?
         let prev: String?
     }
-
     let info: Info
     let results: [CharacterModel]
 }

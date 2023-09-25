@@ -31,7 +31,6 @@ public class NetworkService: NetworkServiceProtocol {
             if let data = dataResponse,
                 error == nil,
                 let result = try? JSONDecoder().decode(AllCharactersModel.self, from: data) {
-                print(result)
                 completion(.success(result))
             } else {
                 completion(.failure(NetworkError.badData))

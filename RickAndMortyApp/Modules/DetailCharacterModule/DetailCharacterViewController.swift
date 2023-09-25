@@ -9,7 +9,6 @@ import UIKit
 
 class DetailCharacterViewController: UIViewController {
     
-    
     var viewModel: DetailViewModel
     let constant = Constant()
     var onUpdateFav: (() -> Void)?
@@ -18,11 +17,13 @@ class DetailCharacterViewController: UIViewController {
     private var characterImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
+        
         return image
     }()
     
     private var characterNameLabel: UILabel = {
         let label = UILabel()
+        
         return label
     }()
     
@@ -43,7 +44,6 @@ class DetailCharacterViewController: UIViewController {
         
         return label
     }()
-    
     
     init(viewModel: DetailViewModel) {
         self.viewModel = viewModel
@@ -78,7 +78,6 @@ class DetailCharacterViewController: UIViewController {
         speciesCharacterLabel.font = UIFont(name: constant.avenirBook, size: 18)
         genderCharacterLabel.font = UIFont(name: constant.avenirBook, size: 18)
         statusCharacterLabel.font = UIFont(name: constant.avenirBook, size: 18)
-        
     }
     
     private func addViews() {
