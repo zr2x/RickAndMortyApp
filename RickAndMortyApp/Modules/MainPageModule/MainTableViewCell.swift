@@ -172,7 +172,6 @@ class MainTableViewCell: UITableViewCell {
     @objc
     private func buttonTap() {
         isFavourite.toggle()
-        updateTitleButton()
         onToggleFav?(charID)
     }
 }

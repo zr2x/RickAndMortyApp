@@ -70,8 +70,8 @@
 		C06ACD812ABED61600F6DA8C /* DetailCharacterModule */ = {
 			isa = PBXGroup;
 			children = (
-				C06ACD862ABEF1F300F6DA8C /* ViewModel */,
 				C06ACD822ABED64800F6DA8C /* DetailCharacterViewController.swift */,
+				C06ACD862ABEF1F300F6DA8C /* ViewModel */,
 			);
 			path = DetailCharacterModule;
 			sourceTree = "<group>";

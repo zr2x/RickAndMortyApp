@@ -20,11 +20,13 @@ protocol MainViewModel {
 
 class MainViewModelImp: MainViewModel {
     
+    // FIXME: rewrite with combine && rx
     var onLoadCharacters: (([CharacterModel]) -> ())?
     var onErrorHandler: ((Error) -> ())?
     var dataSource: AllCharactersModel?
     var favouriteDataBase = FavoriteDatabase()
     
+    // FIXME: rewrite with generic
     func getData() {
         NetworkService.getCharacter { [weak self] result in
             switch result {

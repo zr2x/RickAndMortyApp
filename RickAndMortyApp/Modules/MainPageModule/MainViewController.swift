@@ -10,10 +10,10 @@ import SnapKit
 
 class MainViewController: UIViewController {
     
-    var viewModel: MainViewModel = MainViewModelImp()
-    var cellDataSource = [CharacterModel]()
-    var favourites = Set<Int>()
-    var dataSource = [CharacterModel]()
+    private var viewModel: MainViewModel = MainViewModelImp()
+    private var cellDataSource = [CharacterModel]()
+    private var favourites = Set<Int>()
+    private var dataSource = [CharacterModel]()
     
     // MARK: - UI
     private var tableView: UITableView = {
@@ -22,11 +22,7 @@ class MainViewController: UIViewController {
         return tableView
     }()
     
-    private var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        
-        return refreshControl
-    }()
+    private var refreshControl = UIRefreshControl()
     
     private var segmentedControl: UISegmentedControl = {
         let itemsSegment = ["All characters", "Favourite"]
@@ -63,13 +59,13 @@ class MainViewController: UIViewController {
     // MARK: - Layout
     private func layout() {
         segmentedControl.snp.makeConstraints { make in
-            make.left.equalTo(view.safeAreaLayoutGuide).offset(50)
-            make.right.equalTo(view.safeAreaLayoutGuide).offset(-50)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(300)
             make.height.equalTo(35)
         }
         
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.top.equalTo(view.snp.topMargin)
             make.left.right.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         tableView.tableHeaderView = segmentedControl
@@ -98,10 +94,12 @@ class MainViewController: UIViewController {
     
     @objc
     private func refreshControlAction() {
+        viewModel.getData()
         tableView.reloadData()
         DispatchQueue.main.async {
             self.tableView.refreshControl?.endRefreshing()
         }
+        
     }
     
     // MARK: - Segment action
@@ -133,10 +131,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         let characterRow = cellDataSource[indexPath.row]
         cell.configureViews(character: characterRow, isFav: viewModel.getFavouriteList().contains(characterRow.id))
         cell.onToggleFav = { [weak self] id in
-            guard let dataSource = self?.dataSource, let viewModel = self?.viewModel, let tableView = self?.tableView else { return}
-            viewModel.setFavourite(id: id)
-            guard self?.segmentedControl.selectedSegmentIndex == 1 else { return }
-            self?.cellDataSource = dataSource.filter({ viewModel.getFavouriteList().contains($0.id) })
+            guard let self else { return }
+            self.viewModel.setFavourite(id: id)
+            guard self.segmentedControl.selectedSegmentIndex == 1 else { return }
+            self.cellDataSource = self.dataSource.filter({ self.viewModel.getFavouriteList().contains($0.id) })
             tableView.reloadData()
         }
         return cell
@@ -154,5 +152,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             cell.configureViews(character: character, isFav: self.viewModel.getFavouriteList().contains(character.id))
         }
         navigationController?.pushViewController(detail, animated: true)
+    }
+}
+
+extension MainViewController: DetailCharacterViewDelegate {
+    func updateFav(id: Int, isFav: Bool) {
+        // home update datasource and tableview cell
     }
 }

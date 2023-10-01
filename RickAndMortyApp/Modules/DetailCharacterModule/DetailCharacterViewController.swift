@@ -7,43 +7,33 @@
 
 import UIKit
 
+protocol DetailCharacterViewDelegate: AnyObject {
+    func updateFav(id: Int, isFav: Bool)
+}
+
 class DetailCharacterViewController: UIViewController {
     
-    var viewModel: DetailViewModel
-    let constant = Constant()
+    private let constant = Constant()
+    var viewModel: DetailViewModel // protocol
     var onUpdateFav: (() -> Void)?
+    
+    weak var delegate: DetailCharacterViewDelegate?
     
     // MARK: - UI
     private var characterImageView: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         
         return image
     }()
     
-    private var characterNameLabel: UILabel = {
-        let label = UILabel()
-        
-        return label
-    }()
+    private var characterNameLabel = UILabel()
     
-    private var statusCharacterLabel: UILabel = {
-        let label = UILabel()
-        
-        return label
-    }()
+    private var statusCharacterLabel = UILabel()
     
-    private var speciesCharacterLabel: UILabel = {
-        let label = UILabel()
-        
-        return label
-    }()
+    private var speciesCharacterLabel = UILabel()
     
-    private var genderCharacterLabel: UILabel = {
-        let label = UILabel()
-        
-        return label
-    }()
+    private var genderCharacterLabel = UILabel()
     
     init(viewModel: DetailViewModel) {
         self.viewModel = viewModel
@@ -58,26 +48,7 @@ class DetailCharacterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onFavItem))
-        
         addViews()
-    }
-    
-    private func configureView() {
-        title = "Character detail"
-        view.backgroundColor = .systemBackground
-        characterImageView.kf.setImage(with: URL(string: viewModel.imageCharacter))
-        
-        characterNameLabel.text = "Name: " + viewModel.nameCharacter
-        speciesCharacterLabel.text = "Species " + viewModel.speciesCharacter
-        genderCharacterLabel.text = "Gender: " + viewModel.genderCharacter
-        statusCharacterLabel.text = "Status: " + viewModel.statusCharacter
-        
-        characterNameLabel.font = UIFont(name: constant.avenirBook, size: 18)
-        speciesCharacterLabel.font = UIFont(name: constant.avenirBook, size: 18)
-        genderCharacterLabel.font = UIFont(name: constant.avenirBook, size: 18)
-        statusCharacterLabel.font = UIFont(name: constant.avenirBook, size: 18)
     }
     
     private func addViews() {
@@ -91,13 +62,37 @@ class DetailCharacterViewController: UIViewController {
         configureView()
     }
     
+    private func configureView() {
+        title = "Character detail"
+        view.backgroundColor = .systemBackground
+        characterImageView.kf.setImage(with: URL(string: viewModel.imageCharacter))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: viewModel.isFavourite ? "Unsave" : "Save",
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(onFavItem))
+        
+        characterNameLabel.text = "Name: " + viewModel.nameCharacter
+        speciesCharacterLabel.text = "Species " + viewModel.speciesCharacter
+        genderCharacterLabel.text = "Gender: " + viewModel.genderCharacter
+        statusCharacterLabel.text = "Status: " + viewModel.statusCharacter
+        
+        characterNameLabel.font = UIFont(name: constant.avenirBook, size: 18)
+        speciesCharacterLabel.font = UIFont(name: constant.avenirBook, size: 18)
+        genderCharacterLabel.font = UIFont(name: constant.avenirBook, size: 18)
+        statusCharacterLabel.font = UIFont(name: constant.avenirBook, size: 18)
+    }
+    
+
+    
     // MARK: - Layout
     
     private func layout() {
         
         characterImageView.snp.makeConstraints { make in
-            make.top.left.right.equalTo(view.safeAreaLayoutGuide)
-            make.width.height.equalTo(200)
+            make.left.right.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(150)
+            make.size.equalTo(100)
         }
         
         characterNameLabel.snp.makeConstraints { make in
@@ -127,7 +122,8 @@ class DetailCharacterViewController: UIViewController {
     
     @objc
     private func onFavItem() {
-        viewModel.setFav()
+        let isFavourite = viewModel.setFav()
+        navigationItem.rightBarButtonItem?.title = isFavourite ? "Unsave" : "Save"
         onUpdateFav?()
     }
 }

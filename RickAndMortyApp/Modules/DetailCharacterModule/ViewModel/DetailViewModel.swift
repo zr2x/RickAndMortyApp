@@ -18,6 +18,8 @@ class DetailViewModel {
     var statusCharacter: String
     var genderCharacter: String
     var speciesCharacter: String
+    var isFavourite: Bool
+    
     
     init(character: CharacterModel) {
         self.character = character
@@ -28,9 +30,10 @@ class DetailViewModel {
         self.statusCharacter = character.status
         self.genderCharacter = character.gender
         self.speciesCharacter = character.species
+        self.isFavourite = favDatabase.get().contains(id)
     }
     
-    func setFav() {
+    func setFav() -> Bool {
         var items = favDatabase.get()
         if items.contains(id) {
             items.remove(id)
@@ -38,5 +41,7 @@ class DetailViewModel {
             items.insert(id)
         }
         favDatabase.save(items: items)
+        
+        return items.contains(id)
     }
 }
