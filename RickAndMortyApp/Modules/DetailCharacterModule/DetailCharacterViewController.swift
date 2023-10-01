@@ -96,7 +96,7 @@ class DetailCharacterViewController: UIViewController {
         }
         
         characterNameLabel.snp.makeConstraints { make in
-            make.top.equalTo(characterImageView.snp.bottom).offset(10)
+            make.top.equalTo(characterImageView.snp.bottom).inset(-150)
             make.left.equalTo(view.safeAreaLayoutGuide).inset(15)
             make.right.equalTo(view.safeAreaLayoutGuide).offset(-15)
         }
