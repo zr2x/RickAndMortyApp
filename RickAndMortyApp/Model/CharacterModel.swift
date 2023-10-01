@@ -21,8 +21,8 @@ struct AllCharactersModel: Codable {
 struct CharacterModel: Codable {
     let id: Int
     let name: String
-    let status: String
+    let status: CharacterStatus
     let species: String
-    let gender: String
+    let gender: CharacterGender
     let image: String
 }

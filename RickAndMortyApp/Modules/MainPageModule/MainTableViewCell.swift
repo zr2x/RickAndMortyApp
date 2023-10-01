@@ -123,7 +123,7 @@ class MainTableViewCell: UITableViewCell {
         charID = character.id
         configureImageView(imageUrl: character.image)
         configureCharacterNameLabel(name: character.name)
-        configureStatusCharacterLabel(status: character.status)
+        configureStatusCharacterLabel(status: character.status.rawValue)
     }
     
     // MARK: - Private methods

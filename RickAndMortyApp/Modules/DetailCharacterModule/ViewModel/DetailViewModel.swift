@@ -27,8 +27,8 @@ class DetailViewModel {
         self.id = character.id
         self.imageCharacter = character.image
         self.nameCharacter = character.name
-        self.statusCharacter = character.status
-        self.genderCharacter = character.gender
+        self.statusCharacter = character.status.rawValue
+        self.genderCharacter = character.gender.rawValue
         self.speciesCharacter = character.species
         self.isFavourite = favDatabase.get().contains(id)
     }

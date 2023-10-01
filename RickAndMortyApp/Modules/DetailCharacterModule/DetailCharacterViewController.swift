@@ -73,7 +73,7 @@ class DetailCharacterViewController: UIViewController {
                                                             action: #selector(onFavItem))
         
         characterNameLabel.text = "Name: " + viewModel.nameCharacter
-        speciesCharacterLabel.text = "Species " + viewModel.speciesCharacter
+        speciesCharacterLabel.text = "Species: " + viewModel.speciesCharacter
         genderCharacterLabel.text = "Gender: " + viewModel.genderCharacter
         statusCharacterLabel.text = "Status: " + viewModel.statusCharacter
         
