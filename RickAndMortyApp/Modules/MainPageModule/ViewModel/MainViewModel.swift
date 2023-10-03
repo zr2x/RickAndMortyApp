@@ -38,6 +38,12 @@ class MainViewModelImp: MainViewModel {
         }
     }
     
+    func getDataApi() {
+        NetworkService.fetchData(for: AllCharactersModel.self) { result in
+//            swit
+        }
+    }
+    
     func getFavouriteList() -> Set<Int> {
         favouriteDataBase.get()
     }

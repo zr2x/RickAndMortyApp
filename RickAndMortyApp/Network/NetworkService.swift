@@ -38,4 +38,20 @@ public class NetworkService: NetworkServiceProtocol {
         }
         task.resume()
     }
+    
+    static func fetchData<ResponseApi: Decodable>(for type: ResponseApi.Type, completion: @escaping (Result<ResponseApi, NetworkError>) -> Void) {
+        let urlString = URL(string: NetworkConstant.shared.serverAddress + NetworkConstant.shared.apiKey + NetworkConstant.shared.character)
+        guard let url = urlString else {
+            completion(.failure(NetworkError.badUrl))
+            return }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { dataResponse, _, error in
+            if let data = dataResponse, error == nil, let result = try? JSONDecoder().decode(ResponseApi.self, from: data) {
+                completion(.success(result))
+            } else {
+                completion(.failure(NetworkError.badData))
+            }
+        }
+        task.resume()
+    }
 }

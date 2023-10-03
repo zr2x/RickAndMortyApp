@@ -7,7 +7,11 @@
 
 import Foundation
 
-class DetailViewModel {
+protocol DetailViewModel {
+    
+}
+
+class DetailViewModelImp {
     
     var character: CharacterModel
     var favDatabase = FavoriteDatabase()

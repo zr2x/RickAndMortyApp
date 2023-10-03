@@ -146,7 +146,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let character = cellDataSource[indexPath.row]
-        let detail = DetailCharacterViewController(viewModel: DetailViewModel(character: character))
+        let detail = DetailCharacterViewController(viewModel: DetailViewModelImp(character: character))
         detail.onUpdateFav = { [weak self] in
             guard let self = self, let cell = tableView.cellForRow(at: indexPath) as? MainTableViewCell else { return }
             cell.configureViews(character: character, isFav: self.viewModel.getFavouriteList().contains(character.id))

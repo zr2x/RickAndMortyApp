@@ -14,7 +14,7 @@ protocol DetailCharacterViewDelegate: AnyObject {
 class DetailCharacterViewController: UIViewController {
     
     private let constant = Constant()
-    var viewModel: DetailViewModel // protocol
+    var viewModel: DetailViewModelImp // protocol
     var onUpdateFav: (() -> Void)?
     
     weak var delegate: DetailCharacterViewDelegate?
@@ -35,7 +35,7 @@ class DetailCharacterViewController: UIViewController {
     
     private var genderCharacterLabel = UILabel()
     
-    init(viewModel: DetailViewModel) {
+    init(viewModel: DetailViewModelImp) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
