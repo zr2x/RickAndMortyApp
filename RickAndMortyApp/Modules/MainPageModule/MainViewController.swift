@@ -8,6 +8,11 @@
 import UIKit
 import SnapKit
 
+enum SegmentedValue: String, CaseIterable {
+    case allCharacters = "All characters"
+    case favourite = "Favourite"
+}
+
 class MainViewController: UIViewController {
     
     private var viewModel: MainViewModel = MainViewModelImp()
@@ -25,7 +30,7 @@ class MainViewController: UIViewController {
     private var refreshControl = UIRefreshControl()
     
     private var segmentedControl: UISegmentedControl = {
-        let itemsSegment = ["All characters", "Favourite"]
+        let itemsSegment = SegmentedValue.allCases.map { $0.rawValue }
         let segment = UISegmentedControl(items: itemsSegment)
         segment.backgroundColor = .lightGray
         segment.selectedSegmentIndex = 0
