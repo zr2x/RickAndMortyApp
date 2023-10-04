@@ -81,6 +81,7 @@ class MainViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
+        //        viewModel.getData()
         viewModel.getData()
     }
     
@@ -94,6 +95,7 @@ class MainViewController: UIViewController {
     
     @objc
     private func refreshControlAction() {
+        //        viewModel.getData()
         viewModel.getData()
         tableView.reloadData()
         DispatchQueue.main.async {

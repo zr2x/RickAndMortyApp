@@ -26,21 +26,15 @@ class MainViewModelImp: MainViewModel {
     var dataSource: AllCharactersModel?
     var favouriteDataBase = FavoriteDatabase()
     
-    // FIXME: rewrite with generic
+    
     func getData() {
-        NetworkService.getCharacter { [weak self] result in
+        NetworkService.getCharacter(for: AllCharactersModel.self) { result in
             switch result {
             case .success(let data):
-                self?.onLoadCharacters?(data.results)
+                self.onLoadCharacters?(data.results)
             case .failure(let error):
-                self?.onErrorHandler?(error)
+                self.onErrorHandler?(error)
             }
-        }
-    }
-    
-    func getDataApi() {
-        NetworkService.fetchData(for: AllCharactersModel.self) { result in
-//            swit
         }
     }
     
