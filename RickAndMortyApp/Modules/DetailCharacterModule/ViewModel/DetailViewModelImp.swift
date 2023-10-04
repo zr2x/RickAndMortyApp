@@ -8,10 +8,11 @@
 import Foundation
 
 protocol DetailViewModel {
-    
+    var character: CharacterModel { get set}
+    var favDatabase: FavoriteDatabase { get set}
 }
 
-class DetailViewModelImp {
+class DetailViewModelImp: DetailViewModel {
     
     var character: CharacterModel
     var favDatabase = FavoriteDatabase()

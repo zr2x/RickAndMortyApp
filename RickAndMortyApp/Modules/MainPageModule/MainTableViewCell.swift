@@ -10,12 +10,12 @@ import Kingfisher
 
 class MainTableViewCell: UITableViewCell {
     
-    static let cellIdentifire = "MainTableViewCell"
-    let constant = Constant()
     var onToggleFav: ((Int) -> Void)?
-    var charID: Int = 0
+    static let cellIdentifire = "MainTableViewCell"
+    private let constant = Constant()
+    private var charID: Int = 0
     
-    var isFavourite: Bool = false {
+    private var isFavourite: Bool = false {
         didSet {
             updateTitleButton()
         }
@@ -150,10 +150,10 @@ class MainTableViewCell: UITableViewCell {
     
     private func updateTitleButton() {
         if isFavourite {
-            favouriteButton.setTitle("Remove from favorites", for: .normal)
+            favouriteButton.setTitle("Remove from favourites", for: .normal)
             favouriteButton.backgroundColor = .red
         } else {
-            favouriteButton.setTitle("Add to favorites", for: .normal)
+            favouriteButton.setTitle("Add to favourites", for: .normal)
             favouriteButton.backgroundColor = .systemBlue
         }
     }

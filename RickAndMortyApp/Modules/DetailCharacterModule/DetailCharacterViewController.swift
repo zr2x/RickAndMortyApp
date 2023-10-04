@@ -83,8 +83,6 @@ class DetailCharacterViewController: UIViewController {
         statusCharacterLabel.font = UIFont(name: constant.avenirBook, size: 18)
     }
     
-
-    
     // MARK: - Layout
     
     private func layout() {
