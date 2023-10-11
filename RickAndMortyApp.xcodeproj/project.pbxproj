@@ -71,13 +71,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		C06ACD812ABED61600F6DA8C /* DetailCharacterModule */ = {
+		C06ACD812ABED61600F6DA8C /* DetailCharacter */ = {
 			isa = PBXGroup;
 			children = (
 				C06ACD822ABED64800F6DA8C /* DetailCharacterViewController.swift */,
 				C06ACD862ABEF1F300F6DA8C /* ViewModel */,
 			);
-			path = DetailCharacterModule;
+			path = DetailCharacter;
 			sourceTree = "<group>";
 		};
 		C06ACD862ABEF1F300F6DA8C /* ViewModel */ = {
@@ -151,20 +151,20 @@
 			isa = PBXGroup;
 			children = (
 				C06ACD7F2ABEABC700F6DA8C /* TabBarController.swift */,
-				C0DA16B42ABDADBB00FFF732 /* MainPageModule */,
-				C06ACD812ABED61600F6DA8C /* DetailCharacterModule */,
+				C0DA16B42ABDADBB00FFF732 /* MainPage */,
+				C06ACD812ABED61600F6DA8C /* DetailCharacter */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		C0DA16B42ABDADBB00FFF732 /* MainPageModule */ = {
+		C0DA16B42ABDADBB00FFF732 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
 				C0DA16A72ABDA82F00FFF732 /* MainViewController.swift */,
 				C0DA16BA2ABDCB9E00FFF732 /* MainTableViewCell.swift */,
 				C0DA16C82ABDFD4300FFF732 /* ViewModel */,
 			);
-			path = MainPageModule;
+			path = MainPage;
 			sourceTree = "<group>";
 		};
 		C0DA16C32ABDD87300FFF732 /* Network */ = {
